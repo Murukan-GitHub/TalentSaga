@@ -1,0 +1,38 @@
+
+.rate {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    margin-bottom: $space;
+
+    label {
+        font-size: 20px;
+        color: #222;
+        cursor: pointer;
+
+        &:hover {
+            color: $brand_yellow_bright;
+
+            & ~ label {
+                color: $brand_yellow_bright;
+            }
+        }
+    }
+
+    input:checked ~ label {
+        color: $brand_yellow_bright;
+
+        .fa:before {
+            content: "\f005";
+        }
+    }
+}
+
+.rate--display {
+    pointer-events: none;
+}
+
+.rate-label {
+    margin-left: 8px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+}

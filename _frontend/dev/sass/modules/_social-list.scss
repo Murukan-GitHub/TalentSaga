@@ -1,0 +1,26 @@
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $space;
+
+    @media screen and (min-width: 30em) {
+        justify-content: flex-start;
+    }
+
+    li {
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+    a {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        line-height: 30px;
+        text-align: center;
+        color: $brand_black;
+        background: #fff;
+    }
+}

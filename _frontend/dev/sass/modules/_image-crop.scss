@@ -1,0 +1,12 @@
+
+.image-crop-modal {
+    @extend .avatar-crop-modal;
+}
+
+.image-crop-modal-dialog {
+    @extend .avatar-crop-modal-dialog;
+}
+
+.image-crop-modal-close {
+    @extend .avatar-crop-modal-close;
+}

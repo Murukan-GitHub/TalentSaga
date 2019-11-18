@@ -1,0 +1,199 @@
+
+.success-story-section {
+    position: relative;
+    color: #fff;
+}
+
+.success-story-section-heading {
+    margin: 0 0 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #222;
+    white-space: nowrap;
+
+    @media #{$medium} {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        z-index: 2;
+        margin-bottom: 0;
+        font-size: 52px;
+        color: currentcolor;
+        transform: translate(-50%, -40%);
+    }
+}
+
+.success-story-slider {
+    position: relative;
+    z-index: 1;
+    margin-bottom: $space;
+
+    @media #{$medium} {
+        margin-bottom: 0;
+    }
+}
+
+.success-story-slider-item {
+    position: relative;
+    padding: ($space * 2) 0;
+    background-size: cover;
+    background-position: center;
+
+    &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+        background: rgba(0,0,0,.6);
+        content: '';
+    }
+
+    @media #{$medium} {
+        height: 100vh;
+        padding: 0;
+        overflow: hidden;
+    }
+}
+
+.success-story {
+    position: relative;
+    z-index: 1;
+    width: 95%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+    @media #{$medium} {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -65%);
+    }
+}
+
+.success-story-cite {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $brand_red;
+
+    &:before {
+        content: '- '
+    }
+
+    &:after {
+        content: ' -'
+    }
+}
+
+.success-story-nav {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: none;
+    width: 60px;
+    height: 100px;
+    padding: 0;
+    border: 0;
+    font-size: 28px;
+    color: #fff;
+    background: $brand_tosca;
+    cursor: pointer;
+    transform: translate(0, -50%);
+
+    &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-family: 'FontAwesome';
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover,
+    &:focus {
+        background: lighten($brand_tosca, 5%);
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    @media #{$medium} {
+        &.is-active {
+            display: block;
+        }
+    }
+}
+
+.success-story-nav--prev {
+    left: 0;
+
+    &:before {
+        content: "\f104";
+    }
+}
+
+.success-story-nav--next {
+    right: 0;
+
+    &:before {
+        content: "\f105";
+    }
+}
+
+.success-story-peek {
+    position: absolute;
+    top: 0;
+    display: flex;
+    font-size: 14px;
+    text-align: left;
+    color: #222;
+    background: #fff;
+    opacity: 0;
+    pointer-events: none;
+
+    .success-story-nav--prev & {
+        left: 100%;
+    }
+
+    .success-story-nav--next & {
+        right: 100%;
+    }
+
+    .success-story-nav:hover & {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+.success-story-peek-img {
+    width: 130px;
+    height: 100px;
+    background-size: cover;
+}
+
+.success-story-peek-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    height: 100px;
+    padding: 8px 16px;
+    line-height: 1.4em;
+}
+
+.success-story-section-more-btn {
+
+    @media #{$medium} {
+        position: absolute;
+        bottom: ($space * 2);
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%, 0);
+    }
+}

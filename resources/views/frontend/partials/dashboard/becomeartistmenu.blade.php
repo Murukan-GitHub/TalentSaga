@@ -1,0 +1,7 @@
+<ol class="baa-steps">
+    <a href="{{ route('user.onboarding.personal') }}"><li class="baa-steps-item {{ in_array( \Request::route()->getName(), ['user.onboarding.personal', 'user.onboarding.talent', 'user.onboarding.portofolio', 'user.onboarding.gallery', 'user.onboarding.pricing']) ? 'is-active' : '' }}">{{ trans('label.data_personal.shortcut') }}</li></a>
+    <a href="{{ route('user.onboarding.talent') }}"><li class="baa-steps-item {{ in_array( \Request::route()->getName(), ['user.onboarding.talent', 'user.onboarding.portofolio', 'user.onboarding.gallery', 'user.onboarding.pricing']) ? 'is-active' : '' }}">{{ trans('label.data_talent.shortcut') }}</li></a>
+    <a href="{{ route('user.onboarding.portofolio') }}"><li class="baa-steps-item {{ in_array( \Request::route()->getName(), ['user.onboarding.portofolio', 'user.onboarding.gallery', 'user.onboarding.pricing']) ? 'is-active' : '' }}">Portfolio</li></a>
+    <a href="{{ route('user.onboarding.gallery') }}"><li class="baa-steps-item {{ in_array( \Request::route()->getName(), ['user.onboarding.gallery', 'user.onboarding.pricing']) ? 'is-active' : '' }}">Upload</li></a>
+    <a href="{{ route('user.onboarding.pricing') }}"><li class="baa-steps-item {{ in_array( \Request::route()->getName(), ['user.onboarding.pricing'] ) ? 'is-active' : '' }}">Pricing</li></a>
+</ol>

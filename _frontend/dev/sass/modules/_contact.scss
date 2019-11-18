@@ -1,0 +1,56 @@
+
+.contact-map {
+    height: 200px;
+
+    @media #{$medium} {
+        height: 450px;
+    }
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: $space auto;
+    font-size: 13px;
+    box-shadow: 0 0 4px $brand_gray_light;
+
+    @media #{$medium} {
+        flex-direction: row;
+        margin: 0 auto ($space * -4);
+        transform: translate(0, -50%);
+    }
+}
+
+.contact-form {
+    flex: 1;
+    padding: 25px;
+    background: #fff;
+
+    .form-input {
+        border: 0;
+        border-bottom: solid 1px $brand_gray_light;
+        border-radius: 0;
+        background: none;
+        box-shadow: none;
+
+        &:focus {
+            border-color: $brand_tosca;
+        }
+    }
+}
+
+.contact-address {
+    width: 100%;
+    padding: 25px;
+    color: #fff;
+    background: $brand_tosca;
+
+    h2 {
+        font-weight: 400;
+    }
+
+    @media #{$medium} {
+        width: 260px;
+    }
+}

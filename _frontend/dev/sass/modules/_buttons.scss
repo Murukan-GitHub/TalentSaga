@@ -1,0 +1,158 @@
+
+// Setup
+// ------------------------------------------------------------------------ //
+
+$BTN_PADDING: ($space / 4) $space;
+
+@mixin btnStyle( $bg, $color: #fff ) {
+    border-color: $bg;
+    color: $color;
+    background: $bg;
+
+    &:hover,
+    &:focus {
+        color: $color;
+        background: lighten($bg, 5%);
+    }
+
+    &.btn--outline {
+        color: $bg;
+        background: none;
+
+        &:hover,
+        &:focus {
+            @if $bg == '#fff' {
+                color: #222;
+            } @else {
+                color: #fff;
+            }
+
+            background: $bg;
+        }
+    }
+}
+
+
+// Base Style
+// ------------------------------------------------------------------------ //
+
+.btn {
+    display: inline-block;
+    padding: $BTN_PADDING;
+    border: solid 1px #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 87.5%;
+    line-height: $base_line_height;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    vertical-align: middle;
+    color: $black80;
+    background: #ddd;
+    cursor: pointer;
+    user-select: none;
+    transition: all 150ms ease;
+
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    &:focus {
+        outline: none;
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+    }
+}
+
+
+// Modifier
+// ------------------------------------------------------------------------ //
+
+.btn--red {
+    @include btnStyle($brand_red);
+}
+
+.btn--tosca {
+    @include btnStyle($brand_tosca);
+}
+
+.btn--black {
+    @include btnStyle($brand_black);
+}
+
+.btn--gray {
+    @include btnStyle($brand_gray);
+}
+
+.btn--white {
+    @include btnStyle(#fff);
+}
+
+.btn--fb {
+    @include btnStyle(brand(fb));
+}
+
+.btn--gplus {
+    @include btnStyle(brand(gp));
+}
+
+.btn--block {
+    width: 100%;
+}
+
+.btn-reset {
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn--sm {
+    font-size: 70%;
+}
+
+.floating-btn-container {
+    position: relative;
+}
+
+.floating-btn {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 4px 8px;
+    border: solid 1px #fff;
+    font-size: 13px;
+    text-align: center;
+    line-height: 22px;
+    color: #fff;
+    background: rgba(0,0,0,.3);
+    cursor: pointer;
+
+    &:hover {
+        color: #222;
+        background: #eee;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &.is-absolute {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+    }
+
+    .no-touch & {
+        opacity: 0;
+        transition: all 350ms ease;
+    }
+
+    .no-touch .floating-btn-container:hover & {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,120 @@
+﻿.hide-extra { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.wrapping-text {
+	table-layout: fixed;
+	word-wrap: break-word;
+	white-space: normal;
+}
+
+.vertical-top { vertical-align: text-top; }
+.vertical-central { vertical-align: central; }
+.vertical-bottom { vertical-align: text-bottom; }
+
+.mark-read {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+	color: #d4d4d4;
+	text-decoration: none;
+	font-weight: normal;
+}
+.mark-read:hover, .mark-read:focus {
+	color: #a2a2a2;
+}
+.mark-read:active {
+	color: #d4d4d4;
+}
+.mark-read > span {
+	display: inline-block;
+}
+.mark-read > span:hover:before,
+.mark-read > span:hover ~ span:before {
+	content: "\f192";
+}
+
+.mark-read-w {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+	color: #d4d4d4;
+	text-decoration: none;
+	font-weight: normal;
+}
+.mark-read-w:hover, .mark-read-w:focus {
+	color: #a2a2a2;
+}
+.mark-read-w:active {
+	color: #d4d4d4;
+}
+.mark-read-w > span {
+	display: inline-block;
+}
+.mark-read-w > span:hover:before,
+.mark-read-w > span:hover ~ span:before {
+	content: "\f192";
+}
+
+.mark-unread {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+	color: #AFC331;
+	text-decoration: none;
+	font-weight: normal;
+}
+.mark-unread:hover, .mark-read:focus {
+	color: #bbcf3f;
+}
+.mark-unread:active {
+	color: #9daf2c;
+}
+.mark-unread > span {
+	display: inline-block;
+}
+.mark-unread > span:hover:before,
+.mark-unread > span:hover ~ span:before {
+	content: "\f10c";
+}
+
+.mark-unread-w {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+	color: #d4d4d4;
+	text-decoration: none;
+	font-weight: normal;
+}
+.mark-unread-w:hover, .mark-unread-w:focus {
+	color: #a2a2a2;
+}
+.mark-unread-w:active {
+	color: #d4d4d4;
+}
+.mark-unread-w > span {
+	display: inline-block;
+}
+.mark-unread-w > span:hover:before,
+.mark-unread-w > span:hover ~ span:before {
+	content: "\f10c";
+}
+
+.icon-action {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+	color: #d4d4d4;
+	text-decoration: none;
+	font-weight: normal;
+}
+.icon-action:hover, .icon-action:focus {
+	color: #a2a2a2;
+}
+.icon-action:active {
+	color: #d4d4d4;
+}
+.icon-remove > span {
+	display: inline-block;
+}
+.icon-remove > span:hover:before,
+.icon-remove > span:hover ~ span:before {
+	content: "\f00d";
+		}
+
+table.dataTable.no-footer {
+   border-bottom: 0; 
+}

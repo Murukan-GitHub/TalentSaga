@@ -1,0 +1,41 @@
+[
+    {
+        "description": "Music",
+        "value": "music",
+        "selected": false,
+        "expertise": [
+            {
+                "description": "singing",
+                "value": "singing",
+                "selected": false
+            },
+            {
+                "description": "playing piano",
+                "value": "piano",
+                "selected": false
+            },
+            {
+                "description": "playing guitar",
+                "value": "guitar",
+                "selected": false
+            }
+        ]
+    },
+    {
+        "description": "Actor / Actrees",
+        "value": "Actor / Actrees",
+        "selected": true,
+        "expertise": [
+            {
+                "description": "tv drama",
+                "value": "tv_drama",
+                "selected": false
+            },
+            {
+                "description": "antagonish",
+                "value": "antagonish",
+                "selected": true
+            }
+        ]
+    }
+]

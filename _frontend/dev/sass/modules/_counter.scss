@@ -1,0 +1,29 @@
+
+.counter {
+    display: inline-flex;
+
+    input {
+        width: 40px;
+        border: 0;
+        border-top: solid 1px #ddd;
+        border-bottom: solid 1px #ddd;
+        text-align: center;
+        background: none;
+    }
+
+    button {
+        width: 30px;
+        padding: 0;
+        border: solid 1px #ddd;
+        background: #eee;
+        cursor: pointer;
+
+        &:hover {
+            background: #e6e6e6;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

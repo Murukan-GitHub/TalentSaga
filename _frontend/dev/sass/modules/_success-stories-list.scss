@@ -1,0 +1,50 @@
+
+.success-stories-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: ($space * -1);
+}
+
+.success-stories-list-item {
+    width: 100%;
+    padding-left: $space;
+    margin-bottom: $space;
+
+    @media screen and (min-width: 30em) {
+        width: 50%;
+    }
+
+    @media #{$medium} {
+        width: 33.3%;
+    }
+
+    @media #{$large} {
+        width: 25%;
+    }
+}
+
+.success-story-news {
+    border: solid 1px $brand_gray_light;
+    font-size: 13px;
+    background: #fff;
+}
+
+.success-story-news-desc {
+    padding: 16px;
+}
+
+.success-story-news-title {
+    height: 44px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    overflow: hidden;
+}
+
+.success-story-news-summary {
+    height: 40px;
+    margin-bottom: 8px;
+    line-height: 20px;
+    overflow: hidden;
+}

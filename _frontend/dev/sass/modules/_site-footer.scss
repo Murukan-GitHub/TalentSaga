@@ -1,0 +1,102 @@
+
+@mixin footerAnchors() {
+    color: #eee;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+        color: #fff;
+    }
+}
+
+.site-footer {
+    position: relative;
+    z-index: 0;
+    padding: $space 0;
+    font-size: 14px;
+    color: #fff;
+    background: $brand_black;
+}
+
+.site-footer-sections {
+    display: flex;
+    flex-direction: column;
+    margin-left: ($space * -1);
+
+    @media screen and (min-width: 30em) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+.site-footer-section {
+    flex: 1;
+    padding-left: $space;
+    text-align: center;
+
+    @media screen and (min-width: 30em) {
+        flex: 1 0 50%;
+        text-align: left;
+    }
+
+    @media #{$large} {
+        flex: 1;
+    }
+}
+
+.site-footer-nav-heading {
+    display: block;
+    margin-bottom: ($space / 2);
+    font: 700 16px/1.4 'Open Sans';
+}
+
+.site-footer-nav-list {
+    margin-bottom: $space;
+
+    li {
+        margin-bottom: 4px;
+    }
+
+    a {
+        @include footerAnchors();
+    }
+}
+
+.site-footer-support-navs {
+
+    a {
+        @include footerAnchors();
+    }
+}
+
+.site-footer-support-navs {
+    display: flex;
+    justify-content: center;
+    margin: 0 -8px $space -8px;
+    margin-bottom: ($space / 2);
+
+    @media screen and (min-width: 30em) {
+        justify-content: flex-start;
+    }
+
+    li {
+        position: relative;
+        display: inline-block;
+        padding: 0 8px;
+
+        &:not(:first-child):before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 1px;
+            height: 50%;
+            background: #fff;
+            content: '';
+            transform: translateY(-50%);
+        }
+    }
+
+    a {
+        display: block;
+    }
+}

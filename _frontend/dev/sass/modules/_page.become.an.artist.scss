@@ -1,0 +1,124 @@
+
+.baa-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-width: 550px;
+    padding: 0;
+    margin: 0 auto ($space * 1);
+    list-style: none;
+    text-align: center;
+
+    &:before {
+        position: absolute;
+        top: 25px;
+        right: 0;
+        left: 0;
+        width: 90%;
+        height: 1px;
+        margin: 0 auto;
+        background: $brand_gray;
+        content: '';
+    }
+}
+
+$baaIconSpriteWidth: 100px;
+$baaIconSpriteHeight: 250px;
+$baaIconStateCount: 2;
+$baaIconCount: 5;
+$baaIconSize: $baaIconSpriteWidth / $baaIconStateCount;
+
+.baa-steps-item {
+    position: relative;
+    display: inline-block;
+    font-size: 80%;
+    transform: scale(.9);
+
+    &:before {
+        display: block;
+        width: $baaIconSize;
+        height: $baaIconSize;
+        border: solid 1px $brand_gray;
+        border-radius: 50%;
+        margin: 0 auto;
+        background: #fff;
+        content: '';
+    }
+
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: $baaIconSize;
+        height: $baaIconSize;
+        background-image: url(../img/become-an-artist-steps.png);
+        background-size: $baaIconSpriteWidth $baaIconSpriteHeight;
+        content: '';
+        transform: translate(-50%, 0) scale(.5);
+    }
+
+
+    &:nth-child(1):after {
+        background-position: 0 0;
+    }
+
+    &.is-active:nth-child(1):after {
+        background-position: -50px 0;
+    }
+
+
+    &:nth-child(2):after {
+        background-position: 0 -50px;
+    }
+
+    &.is-active:nth-child(2):after {
+        background-position: -50px -50px;
+    }
+
+    &:nth-child(3):after {
+        background-position: 0 -100px;
+    }
+
+    &.is-active:nth-child(3):after {
+        background-position: -50px -100px;
+    }
+
+    &:nth-child(4):after {
+        background-position: 0 -150px;
+    }
+
+    &.is-active:nth-child(4):after {
+        background-position: -50px -150px;
+    }
+
+    &:nth-child(5):after {
+        background-position: 0 -200px;
+    }
+
+    &.is-active:nth-child(5):after {
+        background-position: -50px -200px;
+    }
+
+    &.is-active {
+
+        &:before {
+            border-color: $brand_tosca;
+            background: $brand_tosca;
+        }
+    }
+
+    @media #{$medium} {
+        transform: scale(1);
+    }
+}
+
+.form-baa {
+    max-width: 600px;
+    margin: 0 auto;
+    transition: all 300ms ease;
+}
+
+.form-baa-actions {
+    display: flex;
+    justify-content: space-between;
+}

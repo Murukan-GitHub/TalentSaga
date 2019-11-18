@@ -1,0 +1,24 @@
+
+.fancy-heading {
+    position: relative;
+    display: table;
+    padding: ($space / 4) ($space / 2);
+    border-radius: 6px;
+    margin: 0 auto ($space * 1.5);
+    text-transform: uppercase;
+    color: #fff;
+    background: $brand_tosca;
+
+    &:after {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        display: block;
+        width: 48px;
+        height: 10px;
+        margin-top: ($space / 2);
+        background-image: url(../img/success-stories-heading-separator.png);
+        content: '';
+        transform: translate(-50%, 0);
+    }
+}

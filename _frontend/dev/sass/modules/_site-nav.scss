@@ -1,0 +1,52 @@
+
+.site-nav-heading {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.site-nav-btn {
+    width: 50px;
+    height: 30px;
+    padding: 0;
+    border: solid 1px $brand_tosca;
+    border-radius: 5px;
+    color: #fff;
+    background: $brand_tosca;
+    white-space: nowrap;
+
+    .popup.is-active & {
+        color: $brand_tosca;
+        background: #fff;
+    }
+
+    @media #{$medium} {
+        width: 55px;
+        height: 35px;
+    }
+}
+
+.site-nav-anchor {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: currentcolor;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus {
+        color: $brand_tosca;
+    }
+}
+
+.site-nav-icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+}
+
+.site-nav-list-item {
+
+    &:not(:last-child) {
+        margin-bottom: ($space / 2);
+    }
+}

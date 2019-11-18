@@ -1,0 +1,42 @@
+
+.find-talent-info-slider {
+    .slick-dots {
+        button {
+            width: 10px;
+            height: 10px;
+            padding: 0;
+            border: solid 1px #aaa;
+            border-radius: 50%;
+            margin: ($space / 4);
+            text-indent: -999px;
+            overflow: hidden;
+            color: transparent;
+            background: none;
+        }
+
+        .slick-active button {
+            border-color: $brand_tosca;
+            background: $brand_tosca;
+        }
+    }
+}
+
+.find-talent-info-slider-item {
+    text-align: center;
+
+    figcaption {
+        margin-bottom: $space;
+        font-size: 16px;
+        line-height: $space;
+    }
+
+    img {
+        display: inline-block !important;
+    }
+
+    @media #{$medium} {
+        width: 100%;
+        max-width: 600px;
+        margin: $space;
+    }
+}

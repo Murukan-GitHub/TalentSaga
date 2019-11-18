@@ -1,0 +1,30 @@
+
+.site-main {
+    position: relative;
+    z-index: 1;
+}
+
+.site-main-inner {
+    padding-top: 52px;
+
+    @media #{$medium} {
+        padding-top: 53px;
+    }
+
+    @media #{$large} {
+        padding-top: 66px;
+    }
+}
+
+.site-main-inner-padded {
+    padding-top: 77px;
+    padding-bottom: $space;
+
+    @media #{$medium} {
+        padding-top: 78px;
+    }
+
+    @media #{$large} {
+        padding-top: 91px;
+    }
+}

@@ -1,0 +1,47 @@
+
+.faq {
+    padding-left: 40px;
+
+    dt {
+        position: relative;
+        padding: 16px 0;
+        border-bottom: solid 1px $brand_gray;
+        cursor: pointer;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            width: 30px;
+            height: 30px;
+            border: solid 1px $brand_gray;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 28px;
+            content: '+';
+            transform: translate(0, -50%);
+        }
+
+        &.is-active {
+            color: $brand_tosca;
+
+            &:before {
+                border-color: $brand_tosca;
+                content: '-';
+            }
+        }
+    }
+
+    dd {
+        display: none;
+        padding: 16px;
+        margin: 0 0 $space;
+        background: #EBEBEB;
+
+        > :last-child {
+            margin: 0 !important;
+        }
+    }
+}

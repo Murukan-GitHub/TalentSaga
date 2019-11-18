@@ -1,0 +1,238 @@
+
+.talent-profile {
+    position: relative;
+    font-size: 13px;
+    line-height: $space;
+
+    a:not(.btn) {
+        color: currentcolor;
+    }
+
+    @media #{$large} {
+        height: 100vh;
+        overflow: hidden;
+        color: #fff;
+    }
+}
+
+.talent-profile-main-image-wrapper {
+
+    &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: none;
+        background: rgba(0,0,0,.5);
+        content: '';
+    }
+
+    @media #{$large} {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        &:after {
+            display: block;
+        }
+    }
+}
+
+.talent-profile-main-image {
+
+    @media #{$large} {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0;
+        object-fit: cover;
+    }
+}
+
+.talent-profile-main-info {
+    margin-bottom: $space;
+
+    @media #{$large} {
+        position: absolute;
+        bottom: 100px;
+        left: 250px;
+        max-width: 450px;
+        margin-bottom: 0;
+
+        .rate label {
+            color: #fff;
+        }
+    }
+}
+
+.talent-profile-name {
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.talent-profile-job {
+    font: 200 11px 'Open Sans Light';
+    text-transform: uppercase;
+
+    @media #{$large} {
+        color: #b0b0b0;
+    }
+}
+
+.talent-profile-description {
+
+    h3 {
+        font-weight: 400;
+    }
+
+    ul {
+        padding: 0;
+        list-style: none;
+
+        li:before {
+            content: '- ';
+        }
+    }
+
+    @media #{$large} {
+        position: absolute;
+        bottom: 100px;
+        right: 25px;
+        width: 350px;
+        text-align: right;
+    }
+}
+
+.talent-profile-gallery {
+    margin-bottom: $space;
+
+    @media #{$large} {
+        position: absolute;
+        top: 70%;
+        left: 25px;
+        height: 80vh;
+        border-left: solid 1px #fff;
+        margin-bottom: 0;
+        overflow: auto;
+        transform: translate(0, -70%);
+    }
+}
+
+.talent-profile-images {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    transition: all 300ms ease;
+
+    a {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        background: #000;
+        transition: all .3s ease;
+
+        @media screen and (min-width: 30em) {
+            width: 33.3%;
+        }
+    }
+
+    img {
+        width: 100%;
+        padding: 2px;
+    }
+
+
+    @media #{$large} {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        opacity: .4;
+
+        a {
+            width: 100%;
+            opacity: .4;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        img {
+            width: 150px;
+            padding: 0;
+        }
+
+        .talent-profile-gallery:hover & {
+            opacity: 1;
+        }
+    }
+}
+
+.talent-profile-portofolio {
+    padding: $space 0;
+    font-size: 13px;
+}
+
+
+.portofolio-list,
+.talent-rates {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: ($space * -1);
+    margin-left: ($space * -1);
+    margin-bottom: $space;
+
+    li {
+        width: 100%;
+        padding: $space 0;
+        padding-left: $space;
+    }
+
+    @media #{$medium} {
+        li {
+            width: 50%;
+        }
+    }
+}
+
+.portofolio {
+
+    &:after {
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin-top: $space;
+        background: $brand_gray_light;
+        content: '';
+    }
+}
+
+.portofolio-time {
+    color: $brand_gray_dark;
+}
+
+.portofolio-title {
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.portofolio-desc {
+    margin-bottom: 16px;
+}
+
+.talent-profile-avatar {
+    width: 150px;
+    height: 150px;
+    border: solid 3px #fff;
+    border-radius: 50%;
+    object-fit: cover;
+}

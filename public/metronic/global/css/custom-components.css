@@ -1,0 +1,30 @@
+.ms-container {
+    width: auto;
+}
+
+.ms-container .ms-list {
+    min-height: 300px;
+}
+
+.bootstrap-tagsinput {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    color: #555;
+    vertical-align: middle;
+    border-radius: 4px;
+    max-width: 100%;
+    line-height: 22px;
+    cursor: text;
+}
+
+.bootstrap-tagsinput {
+   border: none;
+   box-shadow: none;
+}
+.bootstrap-tagsinput input {
+   display: none;
+}

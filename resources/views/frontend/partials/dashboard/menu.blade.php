@@ -1,0 +1,8 @@
+<ul class="user-dashboard-nav list-nostyle">
+    <li><a class="{{ \Request::route()->getName() == 'user.dashboard.account' ? 'is-active' : '' }}" href="{{ \Request::route()->getName() == 'user.dashboard.account' ? '#' : route('user.dashboard.account') }}">Account information</a></li>
+    <li><a class="{{ \Request::route()->getName() == 'user.dashboard.personal' ? 'is-active' : '' }}" href="{{ \Request::route()->getName() == 'user.dashboard.personal' ? '#' : route('user.dashboard.personal') }}">{{ trans('label.data_personal.title') }}</a></li>
+    <li><a class="{{ \Request::route()->getName() == 'user.dashboard.talent' ? 'is-active' : '' }}" href="{{ \Request::route()->getName() == 'user.dashboard.talent' ? '#' : route('user.dashboard.talent') }}">{{ trans('label.data_talent.title_dashboard') }}</a></li>
+    <li><a class="{{ in_array(\Request::route()->getName(), ['user.dashboard.portofolio', 'user.dashboard.portofolio.edit']) ? 'is-active' : '' }}" href="{{ in_array(\Request::route()->getName(), ['user.dashboard.portofolio', 'user.dashboard.portofolio.edit']) ? '#' : route('user.dashboard.portofolio') }}">Portfolio</a></li>
+    <li><a class="{{ in_array(\Request::route()->getName(), ['user.dashboard.gallery', 'user.dashboard.gallery.edit']) ? 'is-active' : '' }}" href="{{ in_array(\Request::route()->getName(), ['user.dashboard.gallery', 'user.dashboard.gallery.edit']) ? '#' : route('user.dashboard.gallery') }}">Photos &amp; Videos</a></li>
+    <li><a class="{{ \Request::route()->getName() == 'user.dashboard.pricing' ? 'is-active' : '' }}" href="{{ \Request::route()->getName() == 'user.dashboard.pricing' ? '#' : route('user.dashboard.pricing') }}">Pricing information</a></li>
+</ul>

@@ -1,0 +1,149 @@
+
+// Config
+// ------------------------------------------------------------------------ //
+
+$input_border_size      : (1 * 1px);
+$input_border_color     : $black40;
+$input_padding          : ($space / 3);
+$input_bg               : #fff;
+
+
+// Base style
+// ------------------------------------------------------------------------ //
+
+legend {
+    margin-bottom: ($space / 2);
+}
+
+// Fix small bullet on Webkit
+// http://goo.gl/WgqfpM
+input[type="password"] {
+
+}
+
+// Hide input type number spinner
+// http://goo.gl/lcCQgB
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+legend {
+    font-family: 'Open Sans';
+    font-weight: 400;
+}
+
+textarea {
+    vertical-align: middle;
+}
+
+.form__row {
+    margin-bottom: ($space / 2);
+}
+
+.form-label {
+    display: inline-block;
+    margin-bottom: ($space / 4);
+    font-family: 'Open Sans';
+    font-weight: 400;
+}
+
+.form-input {
+    width: 100%;
+    padding: ($space / 4) ($space / 2);
+    border: solid $input_border_size #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    background: $input_bg;
+    box-shadow: inset 0 0 5px #eee;
+    transition: all 300ms ease;
+    appearance: none;
+
+    &:focus {
+        border-color: $brand_tosca;
+        outline: none;
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+    }
+
+    &.input-invalid {
+        border-color: $brand_red;
+    }
+
+    @at-root select#{&} {
+        height: 32.38px;
+        padding: {
+            top: 0;
+            bottom: 0;
+        }
+        background: #fff url(../img/select-arrow.png) no-repeat center right 12px;
+        background-size: 12px;
+        appearance: none;
+
+        @media #{$large} {
+            height: 39.78px;
+        }
+    }
+
+    &.selectize-control {
+        padding: 0;
+        border: 0;
+    }
+
+    &.selectize-control.single .selectize-input {
+        background-color: transparent;
+    }
+}
+
+
+// Modifier
+// ------------------------------------------------------------------------ //
+
+.form-input--inline {
+    width: auto;
+}
+
+.form-input--small {
+    padding: ($space / 8) ($space / 4);
+    font-size: 13px;
+
+    @at-root select#{&} {
+        height: 27.19px;
+
+        @media #{$large} {
+            height: 32.19px;
+        }
+    }
+}
+
+.form-input--error {
+    border-color: #d32c31;
+
+    &:focus {
+        border-color: #d32c31;
+    }
+}
+
+.form-input--success {
+    border-color: #4eb74a;
+
+    &:focus {
+        border-color: #4eb74a;
+    }
+}
+
+.form-input--block {
+    width: 100%;
+}
+
+.msg-error {
+    font-size: 80%;
+    color: $brand_red;
+}

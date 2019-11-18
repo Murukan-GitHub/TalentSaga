@@ -1,0 +1,48 @@
+﻿
+.chartZoom {
+  position: relative;
+}
+
+.chartZoom .chartZoom-container {
+  height: 260px;
+}
+
+.chartZoom .chartZoom-btn {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(238, 125, 48, 0.7);
+  opacity: 0;
+  -webkit-transition: opacity .25s ease;
+  transition: opacity .25s ease;
+  color: #FFF;
+}
+
+.chartZoom .chartZoom-btn:hover {
+  opacity: 1;
+}
+
+.chartZoom .chartZoom-btn:hover .btn-icon {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+      -ms-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.chartZoom .chartZoom-btn .btn-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  font-size: 2em;
+  -webkit-transform: translate(-50%, -50%) scale(0.5);
+      -ms-transform: translate(-50%, -50%) scale(0.5);
+          transform: translate(-50%, -50%) scale(0.5);
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}

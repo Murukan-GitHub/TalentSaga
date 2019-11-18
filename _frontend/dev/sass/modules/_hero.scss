@@ -1,0 +1,148 @@
+
+.hero {
+    position: relative;
+    padding: ($space * 3) 0;
+    color: #fff;
+    background-position: center;
+    background-size: cover;
+
+    &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+        background: radial-gradient(rgba(255,255,255,0), rgba(0,0,0,.9));
+        content: '';
+    }
+
+    @media #{$medium} {
+        height: 100vh;
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 95%;
+    max-width: 860px;
+    margin: 0 auto;
+
+    @media #{$medium} {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: 0;
+        transform: translate(0, -50%);
+    }
+}
+
+.hero-heading {
+    max-width: 200px;
+    margin: 0 auto 16px;
+    font-size: 36px;
+    font-family: $secondary_family;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    svg {
+        vertical-align: middle;
+    }
+
+    @media #{$medium} {
+        max-width: 350px;
+        margin-bottom: 50px;
+    }
+}
+
+.hero-search-form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    color: #222;
+    background: #fff;
+
+    label {
+        font: 400 12px 'Open Sans';
+        text-transform: uppercase;
+        color: $brand_gray;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    @media #{$medium} {
+        align-items: center;
+        flex-direction: row;
+
+        button {
+            width: auto;
+        }
+    }
+}
+
+.hero-search-form-section {
+    padding: ($space / 1.5) $space;
+
+    &:not(:last-child) {
+        border-bottom: solid 1px $brand_gray_light;
+    }
+
+    .selectize-input {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        border: 0 !important;
+        font-size: 100% !important;
+        background: none !important;
+        box-shadow: none !important;
+
+        &:after {
+            display: none !important;
+        }
+    }
+
+    .selectize-dropdown {
+        border: 0;
+
+        [data-selectable] {
+            padding: 10px 12px;
+        }
+    }
+
+    .selectize-dropdown-content {
+        background: #fff;
+
+        .active {
+            background: $brand_gray_light;
+        }
+    }
+
+    @media #{$medium} {
+
+        &:not(:last-child) {
+            border-bottom: 0;
+            border-right: solid 1px $brand_gray_light;
+        }
+    }
+}
+
+.hero-search-form-section--pushed {
+    flex: 1;
+}
+
+.hero-input {
+    width: 100%;
+    height: 30px;
+    padding: 0;
+    border: 0;
+    background: transparent url(../img/select-arrow.png) no-repeat center right 8px;
+    background-size: 10px;
+    appearance: none;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}

@@ -1,0 +1,105 @@
+
+.activity-filter-form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: $space;
+    font-size: 12px;
+
+    label {
+        display: none;
+        margin-right: $space;
+        white-space: nowrap;
+    }
+
+    select {
+        width: 200px;
+        height: 32px;
+        padding: 0 ($space / 2);
+    }
+
+    @media screen and (min-width: 30em) {
+        label {
+            display: inline-block;
+        }
+    }
+}
+
+.activity-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: ($space * -1);
+}
+
+.activity-list-item {
+    width: 100%;
+    padding-left: $space;
+    margin-bottom: $space;
+
+    @media #{$medium} {
+        width: 50%;
+    }
+}
+
+.activity {
+    position: relative;
+    padding: $space;
+    padding-bottom: ($space * 2);
+    border: solid 1px $brand_gray_light;
+    font-size: 14px;
+    background: #fff;
+    box-shadow: 2px 2px 4px $brand_gray_light;
+
+    hr {
+        border-color: $brand_gray_light;
+    }
+}
+
+.activity--done {
+    background: lighten($brand_gray_light, 8%);
+}
+
+.activity-form {
+    margin-bottom: $space;
+    text-align: right;
+
+    button {
+        padding: ($space / 4) ($space / 2);
+        border: solid 1px $brand_gray_light;
+        font-size: 12px;
+        background: none;
+        cursor: pointer;
+
+        &:hover {
+            background: lighten($brand_gray_light, 6%);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    fieldset[disabled] button {
+        border-color: darken($brand_green, 5%);
+        color: #fff;
+        background: $brand_green;
+        cursor: auto;
+        pointer-events: none;
+
+        .fa:before {
+            content: "\f046";
+        }
+    }
+
+    @media #{$medium} {
+        position: absolute;
+        top: $space;
+        right: $space;
+    }
+}
+
+.activity-review-btn {
+    position: absolute;
+    bottom: $space;
+    left: $space;
+}

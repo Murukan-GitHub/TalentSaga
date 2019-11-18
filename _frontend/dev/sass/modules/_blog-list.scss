@@ -1,0 +1,57 @@
+
+.blog-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: $space * -1;
+}
+
+.blog-list-item {
+    width: 100%;
+    padding-left: $space;
+    margin-bottom: $space;
+
+    @media screen and (min-width: 30em) {
+        width: 50%;
+    }
+
+    @media #{$medium} {
+        width: 33.3%;
+    }
+}
+
+.blog-entry {
+    display: block;
+    padding: ($space / 1);
+    border: solid 1px #ddd;
+    font-size: 87.5%;
+    color: #333;
+
+    &:hover,
+    &:focus {
+        border-color: $brand_tosca;
+        color: $brand_tosca;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    figure {
+        margin: $space * -1;
+        margin-bottom: $space;
+    }
+
+    img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    time {
+        font-size: 87.5%;
+    }
+
+    h3 {
+        margin-bottom: 0;
+    }
+}

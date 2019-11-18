@@ -1,0 +1,46 @@
+
+// Config
+// ------------------------------------------------------------------------ //
+
+$pagination_padding         : ($space / 4) ($space / 2);
+
+$pagination_border          : #ddd;
+$pagination_color           : #666;
+$pagination_bg              : #eee;
+
+$pagination_active_border   : #555;
+$pagination_active_color    : #f8f8f8;
+$pagination_active_bg       : #888;
+
+
+// Style
+// ------------------------------------------------------------------------ //
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    font-size: 13px;
+
+    li {
+        margin-left: -1px;
+
+        &:first-child a { border-radius: 4px 0 0 4px; }
+        &:last-child a { border-radius: 0 4px 4px 0; }
+    }
+
+    a {
+        display: block;
+        padding: 12px 16px;
+        border: solid 1px $brand_gray_light;
+        background: #fff;
+
+        &.active {
+            border-color: $brand_tosca;
+            color: #fff;
+            background: $brand_tosca;
+            pointer-events: none;
+        }
+    }
+}

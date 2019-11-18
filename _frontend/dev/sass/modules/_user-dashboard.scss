@@ -1,0 +1,24 @@
+
+.user-dashboard-nav {
+    margin: $space -25px;
+    font-size: 80%;
+
+    li {
+
+    }
+
+    a {
+        display: block;
+        padding: 8px 25px;
+
+        &.is-active {
+            color: #fff;
+            background: $brand_tosca;
+            pointer-events: none;
+        }
+    }
+
+    @media #{$large} {
+        font-size: 100%;
+    }
+}

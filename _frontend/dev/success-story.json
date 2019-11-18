@@ -1,0 +1,25 @@
+{
+    "success_stories": [
+        {
+            "name": "Ryo Raden Tyo",
+            "shortDesc": "Lorem ipsum dolor sit amet, consectetur.",
+            "longDesc": "1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, tempora iste accusamus repellat soluta aliquam dicta eius minus iusto rerum necessitatibus temporibus aliquid optio provident asperiores dolore et rem hic libero. Molestiae perspiciatis cupiditate asperiores eaque praesentium nam illum excepturi.",
+            "imageThumb": "assets/img/success-story-profile-1-small.jpg",
+            "imageBackground": "assets/img/success-story-profile-1.jpg"
+        },
+        {
+            "name": "Andhakar Giovani",
+            "shortDesc": "Lorem ipsum dolor sit amet, consectetur.",
+            "longDesc": "2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus velit iste atque enim eaque quibusdam iure dolorum voluptatum! Corporis aperiam qui, dolor, est id dignissimos ullam distinctio aut minima quis voluptas iusto esse optio, laudantium recusandae assumenda, aliquid porro voluptates!",
+            "imageThumb": "assets/img/success-story-profile-1-small.jpg",
+            "imageBackground": "assets/img/success-story-profile-1.jpg"
+        },
+        {
+            "name": "Chandi Rodata",
+            "shortDesc": "Lorem ipsum dolor sit amet, consectetur.",
+            "longDesc": "3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus eos placeat libero, ex alias. Voluptas atque laborum, assumenda. Velit amet itaque, similique vel, fuga nesciunt non maiores, provident enim a suscipit tempora laborum dicta hic impedit consectetur eius quae commodi?",
+            "imageThumb": "assets/img/success-story-profile-1-small.jpg",
+            "imageBackground": "assets/img/success-story-profile-1.jpg"
+        }
+    ]
+}

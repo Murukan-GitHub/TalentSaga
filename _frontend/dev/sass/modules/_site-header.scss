@@ -1,0 +1,205 @@
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    padding: 8px 0;
+    box-shadow: 0 0 10px transparent;
+    transition: all 300ms ease;
+
+    @media #{$medium} {
+        padding: 0;
+    }
+}
+
+.site-header:hover,
+.site-header--active,
+.site-header.headroom--not-top {
+    background: #fff;
+    box-shadow: 0 0 10px #ddd;
+}
+
+.site-header-sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media #{$medium} {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+}
+
+$logo_width_small: 75px;
+$logo_height_small: 36px;
+
+$logo_width_big: 125px;
+$logo_height_big: 60px;
+
+$logo_count: 2;
+
+.site-header-logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.site-header-logo {
+    width: $logo_width_small;
+    height: ($logo_height_small / 2);
+    margin-right: 16px;
+    margin-bottom: 0;
+    color: transparent;
+    overflow: hidden;
+    text-indent: -999px;
+    background: url(../img/logo.png);
+    background-size: $logo_width_small $logo_height_small;
+
+    .site-header:hover &,
+    .site-header--active &,
+    .site-header.headroom--not-top & {
+        background-position: 0 ($logo_height_small / 2 * -1);
+    }
+
+    @media #{$large} {
+        width: $logo_width_big;
+        height: ($logo_height_big / 2);
+        background-size: $logo_width_big $logo_height_big;
+
+        .site-header:hover &,
+        .site-header--active &,
+        .site-header.headroom--not-top & {
+            background-position: 0 ($logo_height_big / 2 * -1);
+        }
+    }
+}
+
+.site-header-search-toggle {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 0;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    .site-header:hover &,
+    .site-header--active &,
+    .site-header.headroom--not-top & {
+        color: #222;
+    }
+
+    @media #{$medium} {
+        display: none;
+    }
+}
+
+.site-header-search {
+    position: relative;
+    order: 2;
+    display: none;
+    width: 100%;
+    border-right: solid 1px transparent;
+    border-left: solid 1px transparent;
+    margin-top: 8px;
+    transition: all 300ms ease;
+
+    &.is-active {
+        display: block;
+    }
+
+    @media #{$medium} {
+        flex: 1;
+        order: 0;
+        display: block;
+        width: auto;
+        margin: 0 $space;
+
+        .site-header:hover &,
+        .site-header--active &,
+        .site-header.headroom--not-top & {
+            border-color: #eee;
+        }
+    }
+}
+
+.site-header-search-input {
+    width: 100%;
+    padding: ($space / 2);
+    border: 0;
+    color: #fff;
+    background: none;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba($brand_tosca, .4);
+    }
+
+    .site-header:hover &,
+    .site-header--active & {
+        color: #222;
+    }
+
+    @media #{$medium} {
+        padding: ($space / 1.25);
+    }
+}
+
+.site-header-search-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    font-size: 18px;
+    color: #aaa;
+    background: none;
+}
+
+.site-header-user-actions {
+    display: flex;
+    align-items: center;
+
+    > * + * {
+        margin-left: 8px;
+    }
+}
+
+.site-header-login-btn.btn--black {
+    border-color: #fff;
+    color: #fff;
+
+    .hidden-small {
+        display: none;
+
+        @media #{$medium} {
+            display: inline;
+        }
+    }
+
+    .hidden-medium {
+        @media #{$medium} {
+            display: none;
+        }
+    }
+
+    .site-header:hover &,
+    .site-header--active &,
+    .site-header.headroom--not-top & {
+        border-color: $brand_black;
+        color: $brand_black;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+}

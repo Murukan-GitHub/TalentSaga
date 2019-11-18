@@ -1,0 +1,61 @@
+
+.user-area-btn {
+    display: inline-block;
+    text-align: center;
+    line-height: 32px;
+    color: #fff;
+
+    .fa {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        border: solid 1px #ddd;
+        border-radius: 50%;
+        line-height: 34px;
+    }
+
+    .site-header:hover &,
+    .site-header--active &,
+    .site-header.headroom--not-top & {
+        border-color: $brand_gray_dark;
+        color: $brand_gray_dark;
+
+        &:hover,
+        &:focus {
+            color: $brand_tosca;
+
+            .fa {
+                border-color: $brand_tosca;
+                color: #fff;
+                background: $brand_tosca;
+            }
+        }
+    }
+}
+
+.user-area-btn-name {
+    position: relative;
+    top: -2px;
+    display: none;
+    max-width: 120px;
+    font-size: 87.5%;
+
+    @media #{$large} {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.user-area-menus {
+    font-size: 14px;
+    text-align: right;
+
+    a {
+        display: block;
+        color: #444;
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+}

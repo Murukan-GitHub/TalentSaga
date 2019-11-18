@@ -1,0 +1,60 @@
+
+.upload-photos-modal {
+    @extend .modal;
+}
+
+.upload-photos-modal-dialog {
+    @extend .modal-dialog;
+}
+
+.upload-photos-modal-dialog-close {
+    @extend .modal-dialog-close;
+}
+
+.upload-photos-dropzone {
+    display: block;
+    padding: $space;
+    border: solid 2px transparent;
+    text-align: center;
+    background: #eee;
+
+    &.is-dragging {
+        border-color: #ccc;
+    }
+}
+
+.upload-photos-dropzone-label {
+    cursor: pointer;
+}
+
+.upload-photos-dropzone-previews-item {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.upload-photos-dropzone-previews-item-remove {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: solid 1px #ccc;
+    border-radius: 3px;
+    font-size: 11px;
+    line-height: 24px;
+    color: #777;
+    background: #fff;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 350ms ease;
+
+    &:hover {
+        color: #222;
+    }
+
+    .upload-photos-dropzone-previews-item:hover & {
+        opacity: 1;
+    }
+}

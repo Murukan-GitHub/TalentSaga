@@ -1,0 +1,75 @@
+[
+    {
+        "name": "Select country",
+        "value": "",
+        "selected": true,
+        "cities": [
+            {
+                "name": "---",
+                "value": "---",
+                "selected": true
+            }
+        ]
+    },
+    {
+        "name": "Indonesia",
+        "value": "INA",
+        "selected": false,
+        "cities": [
+            {
+                "name": "Jakarta",
+                "value": "DKI Jakarta",
+                "selected": false
+            },
+            {
+                "name": "Medan",
+                "value": "Medan",
+                "selected": false
+            }
+        ]
+    },
+    {
+        "name": "Canada",
+        "value": "CAD",
+        "selected": false,
+        "cities": [
+            {
+                "name": "Edmonton",
+                "value": "Edmonton",
+                "selected": false
+            },
+            {
+                "name": "Calgary",
+                "value": "Calgary",
+                "selected": false
+            },
+            {
+                "name": "Toronto",
+                "value": "Toronto",
+                "selected": false
+            }
+        ]
+    },
+    {
+        "name": "Germany",
+        "value": "GER",
+        "selected": false,
+        "cities": [
+            {
+                "name": "Berlin",
+                "value": "Berlin",
+                "selected": false
+            },
+            {
+                "name": "Dresden",
+                "value": "Dresden",
+                "selected": false
+            },
+            {
+                "name": "Munich",
+                "value": "Munich",
+                "selected": true
+            }
+        ]
+    }
+]

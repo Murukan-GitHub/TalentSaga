@@ -1,0 +1,142 @@
+/*! [PROJECT_NAME] | Suitmedia */
+
+//  1. Font-face
+//  2. Basic styles
+//  3. Header
+//  4. Page styles
+//  5. Footer
+
+@import "partial/normalize";
+@import "partial/variables";
+@import "partial/resets";
+@import "partial/helpers";
+@import "partial/print";
+
+@import "mixin/mixin";
+@import "modules/modules";
+@import "plugin/plugin";
+
+// 1 Font-face
+// ------------------------------------------------------------------------ //
+
+
+
+// 2 Basic styles
+// ------------------------------------------------------------------------ //
+
+html {
+    height: 100%;
+    font: 200 13px $base_font_family;
+    line-height: $base_line_height;
+    overflow-x: hidden;
+
+    @media #{$large} {
+        font-size: 16px;
+    }
+}
+
+body {
+    height: 100%;
+    color: #444;
+    background: #FCFCFC;
+}
+
+a {
+    color: $link;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: $link_hover;
+    }
+}
+
+b,
+strong {
+    font-family: 'Open Sans';
+    font-weight: 700;
+}
+
+strong i,
+strong em,
+b i,
+b em,
+em strong,
+em b,
+i strong,
+i b {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 700;
+}
+
+.block {
+    margin-bottom: $space;
+}
+
+.block-half {
+    margin-bottom: ($space / 2);
+}
+
+.container {
+    width: 95%;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.cta-become-an-artist {
+    position: relative;
+    top: 1px;
+    display: none;
+
+    @media #{$medium} {
+        display: inline-block;
+    }
+}
+
+.city-availability-hidden {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.section {
+    padding: ($space * 2) 0;
+}
+
+.section--white {
+    background: #fff;
+}
+
+.normalize-selectize {
+
+    .selectize-input {
+        height: 38.1px !important;
+        padding: 0.4em 0.8em !important;
+        border: solid 1px #ddd !important;
+        font-size: 100% !important;
+        line-height: 1.6em !important;
+        background: none !important;
+        box-shadow: inset 0 0 5px #eee !important;
+    }
+
+    .form-input.selectize-control {
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+    }
+
+    .form-input.selectize-dropdown {
+        padding: 0;
+    }
+}
+
+// 3 Header
+// ------------------------------------------------------------------------ //
+
+
+// 4 Page styles
+// ------------------------------------------------------------------------ //
+
+
+// 5 Footer
+// ------------------------------------------------------------------------ //

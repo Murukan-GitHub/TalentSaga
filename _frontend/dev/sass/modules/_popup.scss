@@ -1,0 +1,68 @@
+
+.popup {
+    position: relative;
+}
+
+.popup-btn {
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.popup-content {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 5;
+    min-width: 200px;
+    padding: ($space / 1);
+    border-radius: 5px;
+    margin-top: ($space / 1);
+    background: #fff;
+    box-shadow: 0 0 5px #ddd;
+    transform: translate(-50%, -10px);
+    transition: all 300ms ease;
+
+    .popup.is-active & {
+        transform: translate(-50%, 0);
+    }
+
+    .popup--right & {
+        right: 0;
+        left: auto;
+        transform: translate(0, -10px);
+    }
+
+    .popup--right.is-active & {
+        transform: translate(0, 0);
+    }
+
+    .pointerevents & {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .pointerevents .popup.is-active & {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .no-pointerevents & {
+        display: none;
+    }
+
+    .no-pointerevents .popup.is-active & {
+        display: block;
+    }
+
+    @media #{$medium} {
+        left: 0;
+        transform: translate(0, -10px);
+
+        .popup.is-active & {
+            transform: translate(0, 0);
+        }
+    }
+}
